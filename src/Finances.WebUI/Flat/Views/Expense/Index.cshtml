@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Finances.WebUI.Flat.Models.Expense.ExpenseOverviewModel>
+
+<h2>Flat expenses</h2>
+<a asp-action="Create">Create new flat expense</a>
+
+<div class="table-responsive">
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>@Html.DisplayNameFor(expense => expense.Name)</th>
+                <th>@Html.DisplayNameFor(expense => expense.Cost)</th>
+                <th>@Html.DisplayNameFor(expense => expense.Tags)</th>
+                <th>@Html.DisplayNameFor(expense => expense.Created)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{int i = 1;}
+            @foreach (var expense in Model.OrderByDescending(expense => expense.Created))
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>@Html.DisplayFor(item => expense.Name)</td>
+                    <td>@Html.DisplayFor(item => expense.Cost)</td>
+                    <td>
+                        @string.Join(", ", expense.Tags)
+                    </td>
+                    <td>@Html.DisplayFor(item => expense.Created)</td>
+                </tr>
+                ++i;
+            }
+        </tbody>
+    </table>
+</div>

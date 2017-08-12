@@ -1,0 +1,19 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "v3.3.7",
+    "jquery": "3.2.1",
+    "jquery-validation": "1.17.0",
+    "jquery-validation-unobtrusive": "3.2.6",
+    "jquery-validation-globalize": "1.0.0",
+    "bootstrap-tagsinput": "0.8.0",
+    "cldrjs": "0.4.8"
+  },
+  "resolutions": {
+    "jquery": "3.2.1",
+    "jquery-validation": "1.17.0",
+    "cldrjs": "0.4.8",
+    "bootstrap": "v3.3.7"
+  }
+}
